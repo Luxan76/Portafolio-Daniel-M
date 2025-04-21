@@ -2,22 +2,181 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Portafolio de Daniel Montecillo Mendoza</title>
+  <title>Portafolio | Daniel Montecillo Mendoza</title>
+  <!-- Íconos desde Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    h1 { color: #2c3e50; }
+    /* Configuración general */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 2s ease;
+      transition: background-color 0.5s ease;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1s ease;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+    }
+
+    li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    a {
+      color: #2980b9;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
+      animation: fadeIn 2s ease;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    li i {
+      margin-right: 10px;
+      color: #2c3e50;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header {
+        padding: 30px 10px;
+      }
+      section {
+        padding: 30px 15px;
+      }
+      li {
+        padding: 15px;
+      }
+    }
+
+    /* 🌙 Modo Oscuro automático según preferencia del sistema */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #121212;
+        color: #ddd;
+      }
+      header {
+        background-color: #1f1f1f;
+      }
+      li {
+        background: #1e1e1e;
+        box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+      }
+      a {
+        color: #4dabf7;
+      }
+      li i {
+        color: #ccc;
+      }
+      footer {
+        color: #888;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <h1>Hola, soy Daniel Montecillo Mendoza</h1>
-  <p>Ingeniero en Sistemas | IBIME San Cristóbal</p>
-  <h2>Mis Proyectos</h2>
-  <ul>
-    <li><strong>Sistema Escolar IBIME</strong> - App de gestión de alumnos.</li>
-    <li><strong>Dashboard de Reportes</strong> - Visualización de datos en tiempo real.</li>
-  </ul>
-  <h2>Contacto</h2>
-  <p>Email: daniel@email.com</p>
-  <p><a href="https://github.com/tuusuario">Mi GitHub</a></p>
+
+  <header>
+    <h1>Daniel Montecillo Mendoza</h1>
+    <p>Ingeniero en Sistemas | IBIME San Cristóbal</p>
+  </header>
+
+  <section>
+    <h2>🛠️ Habilidades</h2>
+    <ul>
+      <li><i class="fas fa-code"></i><strong>Lenguajes:</strong> Python, Java, JavaScript, C#</li>
+      <li><i class="fas fa-database"></i><strong>Bases de Datos:</strong> MySQL, SQL Server, MongoDB</li>
+      <li><i class="fas fa-cubes"></i><strong>Frameworks:</strong> React, Node.js, .NET</li>
+      <li><i class="fas fa-tools"></i><strong>Herramientas:</strong> Git, Docker, Jenkins</li>
+      <li><i class="fas fa-file-alt"></i><strong>Otros:</strong> Análisis de requerimientos, documentación, soporte técnico</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📌 Proyectos</h2>
+    <ul>
+      <li>
+        <i class="fas fa-school"></i>
+        <strong>Sistema Escolar IBIME</strong><br>
+        <a href="https://github.com/DanielMontecillo/sistema-escolar-ibime" target="_blank">Ver proyecto en GitHub</a><br>
+        Aplicación para la gestión de alumnos, calificaciones y reportes escolares.
+      </li>
+      <li>
+        <i class="fas fa-chart-line"></i>
+        <strong>Dashboard de Reportes</strong><br>
+        <a href="https://github.com/DanielMontecillo/dashboard-reportes" target="_blank">Ver proyecto en GitHub</a><br>
+        Sistema de visualización de datos en tiempo real para indicadores institucionales.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📞 Contacto</h2>
+    <ul>
+      <li><i class="fas fa-envelope"></i><strong>Email:</strong> daniel.montecillo@ibime.edu.mx</li>
+      <li><i class="fab fa-github"></i><strong>GitHub:</strong> <a href="https://github.com/DanielMontecillo" target="_blank">https://github.com/DanielMontecillo</a></li>
+      <li><i class="fab fa-linkedin"></i><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/danielmontecillo" target="_blank">https://linkedin.com/in/danielmontecillo</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 Daniel Montecillo Mendoza. Todos los derechos reservados.
+  </footer>
+
 </body>
 </html>
